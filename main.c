@@ -238,10 +238,6 @@ int main(void)
                 }
                 
             }
-            if(8 == 8 == 8)
-            {
-                printf("x");
-            }
 
             if(cred)
             {
