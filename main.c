@@ -7,6 +7,8 @@ int gsw(void) {return GetScreenWidth();}
 
 int gsh(void) {return GetScreenHeight();}
 
+bool subtract = false;
+
 typedef struct Rectangle_plus_plus
 {
     Rectangle core_;
@@ -238,6 +240,10 @@ int main(void)
                 }
                 
             }
+            if(8 == 8 == 8)
+            {
+                printf("x");
+            }
 
             if(cred)
             {
@@ -308,10 +314,15 @@ int main(void)
         {
             DrawRectangle(-0.05*side,0.5*side,1.1*side,60,WHITE);
             Rectangle rec = {-0.05*side,0.5*side,1.1*side,60};
-            if(FB.r>255) FB.r--; if(FB.r<50) FB.r++;
-            if(FB.g>255) FB.g--; if(FB.g<50) FB.g++;
-            if(FB.b>255) FB.b--; if(FB.b<50) FB.b++;
-            
+
+
+            if(FB.r>255) subtract = true;
+            if(FB.r<50) subtract = false;
+
+            if(subtract) FB.r--;
+            else FB.r++;
+
+
             DrawRectangleLinesEx(rec, 10,FB);
 
             if (alphaFB>=100) alphaFB--; if(alphaFB<=10) alphaFB++;
