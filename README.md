@@ -1,5 +1,4 @@
 # TicTacToe
-I don't know C 
 
 ## Build 
 1. clone and navigate to the repo, when there: 
